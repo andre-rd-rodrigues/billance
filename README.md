@@ -35,6 +35,20 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
+## Progressive Web App (PWA)
+
+The app is set up as a PWA so it can be installed and used in a browser.
+
+- **Manifest**: `public/manifest.json` (name, icons, theme, display mode).
+- **HTML root**: `app/+html.tsx` links the manifest and sets `theme-color`.
+- **Icons**: Generate 192×192 and 512×512 icons with:
+  ```bash
+  npm run generate-pwa-icons
+  ```
+  (Uses macOS `sips`, or install `sharp` / ImageMagick.)
+
+Build for web: `npm run build:web` (output in `dist/`). Deploy `dist/` to any static host (e.g. Vercel). For offline support, you can add a service worker (e.g. [Workbox](https://developer.chrome.com/docs/workbox/)); see [Expo PWA docs](https://docs.expo.dev/guides/progressive-web-apps/).
+
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
