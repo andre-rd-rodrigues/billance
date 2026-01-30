@@ -1,20 +1,27 @@
 # Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). It uses [Bun](https://bun.sh/) as the package manager ([Expo + Bun guide](https://docs.expo.dev/guides/using-bun/)).
+
+## Prerequisites
+
+- [Bun](https://bun.sh/docs/installation) installed
+- Node.js LTS (required for `bun create expo-app` and `bun expo prebuild`)
 
 ## Get started
 
 1. Install dependencies
 
    ```bash
-   npm install
+   bun install
    ```
 
 2. Start the app
 
    ```bash
-   npx expo start
+   bun run start
    ```
+
+   Or run directly: `bun expo start`. Install Expo packages with `bun expo install <package>`.
 
 In the output, you'll find options to open the app in a
 
@@ -30,7 +37,7 @@ You can start developing by editing the files inside the **app** directory. This
 When you're ready, run:
 
 ```bash
-npm run reset-project
+bun run reset-project
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
@@ -43,11 +50,11 @@ The app is set up as a PWA so it can be installed and used in a browser.
 - **HTML root**: `app/+html.tsx` links the manifest and sets `theme-color`.
 - **Icons**: Generate 192×192 and 512×512 icons with:
   ```bash
-  npm run generate-pwa-icons
+  bun run generate-pwa-icons
   ```
   (Uses macOS `sips`, or install `sharp` / ImageMagick.)
 
-Build for web: `npm run build:web` (output in `dist/`). Deploy `dist/` to any static host (e.g. Vercel). For offline support, you can add a service worker (e.g. [Workbox](https://developer.chrome.com/docs/workbox/)); see [Expo PWA docs](https://docs.expo.dev/guides/progressive-web-apps/).
+Build for web: `bun run build:web` (output in `dist/`). Deploy `dist/` to any static host (e.g. Vercel). For offline support, you can add a service worker (e.g. [Workbox](https://developer.chrome.com/docs/workbox/)); see [Expo PWA docs](https://docs.expo.dev/guides/progressive-web-apps/).
 
 ## Learn more
 
